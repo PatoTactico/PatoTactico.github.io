@@ -29,7 +29,7 @@
     
        <!--Menu-->
     
-    <nav class="navbar navbar-expand-sm bg-info navbar-dark">
+       <nav class="navbar navbar-expand-sm navbar-dark bg-success">
         <div class="container-fluid">
             <ul class="navbar-nav">
             <li class="nav-item">
@@ -98,4 +98,3 @@ if (mysqli_query($conn, $sql)) {
 
 mysqli_close($conn);
 ?>
-
