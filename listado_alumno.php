@@ -11,48 +11,36 @@ include("conexion.php");
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">    
-    <style>
-    table {
-        font-family: arial, sans-serif;
-        border-collapse: collapse;
-        width: 100%;
-    }
+    <link rel="stylesheet" href="./css/estilos.css">
 
-    td,
-    th {
-        border: 1px solid #dddddd;
-        text-align: left;
-        padding: 8px;
-    }
+</head>
+<body>
+    
+<!--------------------------------------
+HEADER
+--------------------------------------->
+<header>
 
-    tr:nth-child(even) {
-        background-color: #dddddd;
-    }
-    </style>
-    
-    <!--Menu-->
-    
-    <nav class="navbar navbar-expand-sm navbar-dark bg-success">
-        <div class="container-fluid">
-            <ul class="navbar-nav">
-            <li class="nav-item">
-                    <a class="nav-link" href="index.html">Bienvenido</a>
-                </li>
-            <li class="nav-item">
-                    <a class="nav-link" href="mytablero.php">MyTablero</a>
-                </li>                
-            <li class="nav-item">
-                    <a class="nav-link active" href="listado_alumno.php">Listado de Alumnos (Admin)</a>
-                </li>
-            <li class="nav-item">
-                    <a class="nav-link" href="registro_alumno.html">Registro de Alumnos (Admin)</a>
-                </li>
-            </ul>
+    <div class="header-content">
+
+        <div class="logo">
+            <h1><b>My</b>Tablero CBtis 191</h1>
         </div>
-    </nav>
-    </nav>
+
+        <div class="menu">
+
+            <nav>
+                <ul>
+                <li><a href="index.html">Bienvenido</a></li>
+                <li><a href="mytablero.php">MyTablero</a></li>
+                <li class="menu-selected"><a href="listado_alumno.php" class="text-menu-selected">Listado de Alumnos(Admin)</a></li>
+                <li><a href="registro_alumno.html">Registro de Alumnos (Admin)</a></li>
+                <li><a href="#">Insertar Tareas (Admin)</a></li>
+                </ul>
+            </nav>
+
+
+</header>
     
 </head>
 
