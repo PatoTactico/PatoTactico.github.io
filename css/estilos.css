@@ -249,7 +249,8 @@ article p{
 @media screen and (max-width: 1220px){
 
     .header-content,
-     .container-content{
+     .container-content,
+     .container-content_01{
         max-width: 1000px;
         padding: 0 20px;
     }
@@ -258,7 +259,8 @@ article p{
 
 @media screen and (max-width: 1020px){
 
-    .container-content{
+    .container-content,
+    .container-content_01{
         width: 100%;
         flex-direction: column;
     }
@@ -344,3 +346,15 @@ article p{
     }
 
 }
+
+/*Registro Alumnos*/
+
+    .container-content_01{
+
+        width: 1200px;
+        margin: auto;
+        margin-top: 80px;
+        display: flex;
+        justify-content: center;
+
+    }
