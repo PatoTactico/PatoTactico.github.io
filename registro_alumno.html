@@ -62,40 +62,35 @@ HEADER
 
         <article>
 
-        <h2>Alta de alumnos</h2>
+        <h1>Alta de alumnos</h1>
 
-        <h6>En caso de que el alumno no este ingresado en el sistema, engreselo de forma manual por este medio.</h6>
+        <p>En caso de que el alumno no este ingresado en el sistema, engreselo de forma manual por este medio.</p>
 
-        <form action="insertardatos.php" method="post">
+        <form action="insertardatos.php" method="post" class="form_a">
 
-            <div class="mb-3 mt-3">
-                <label for="matri">Matricula:</label>
-                <input type="number" class="form-control" id="mat" name="mat" value="1" required min="1" max="999999999999999">
-            </div>
 
-            <div class="mb-3 mt-3">
-                <label for="ap">Apellido Paterno:</label>
-                <input type="text" class="form-control" id="ap" name="ap" required maxlength="15">
-            </div>
+                <p for="matri">Matricula: <br></p>
+                <input type="number" class="field" id="mat" name="mat" value="1" required min="1" max="999999999999999">
 
-            <div class="mb-3 mt-3">
-                <label for="am">Apellido Materno:</label>
-                <input type="text" class="form-control" id="am" name="am" required maxlength="15">
-            </div>
 
-            <div class="mb-3 mt-3">
-                <label for="email">Nombre:</label>
-                <input type="text" class="form-control" id="nom" name="nom" required maxlength="15">
-            </div>
+                <p for="ap">Apellido Paterno: <br></p>
+                <input type="text" class="field" id="ap" name="ap" required maxlength="15">
 
-            <div class="mb-3 mt-3">
-                <label for="email">Semestre</label>
-                <input type="number" class="form-control" id="sem" name="sem" value="1" required min="1" max="6">
-            </div>
 
-            <div class="mb-3 mt-3">
-                <label for="email">Especialidad</label>
-                <input type="text" class="form-control" id="esp" name="esp" list="l1" required
+                <p for="am">Apellido Materno: <br></p>
+                <input type="text" class="field" id="am" name="am" required maxlength="15">
+
+
+                <p for="nom">Nombre: <br></p>
+                <input type="text" class="field" id="nom" name="nom" required maxlength="15">
+
+
+                <p for="sem">Semestre: <br></p>
+                <input type="number" class="field" id="sem" name="sem" value="1" required min="1" max="6">
+
+
+                <p for="esp">Especialidad: <br></p>
+                <input type="text" class="field" id="esp" name="esp" list="l1" required
                 pattern="[Aa]dministracion [Dd]e [Rr]ecursos [Hh]umanos|[Pp]rogramacion|[Ee]lectricidad|[Pp]reparacion [Dd]e [Aa]limentos [Yy] [Bb]ebidas">
 
                     <datalist id="l1">
@@ -104,9 +99,9 @@ HEADER
                       <option>Electricidad</option>
                       <option>Preparacion de alimentos y bebidas</option>
                      </datalist>
-            </div>
 
-            <button type="submit" class="btn btn-primary">Guardar</button>
+
+            <button type="submit" class="btn-primary">Guardar</button>
         </form>
     </article>
 

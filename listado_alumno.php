@@ -61,10 +61,19 @@ HEADER
 
     <div class="container-all" id="move-content">
 
-
         <div class="container-content_01">
 
             <article>
+
+            <div class="search-bar">
+
+                <form action="buscar.php" method="post">
+                    <input type="text" name="buscar" class="field" id="">
+                    <input type="submit" class="field_a" value="Buscar">
+                    <a href="registro_alumno.html" class="btn-primary">Añadir</a>
+                </form>
+
+            </div>
 
                 <h2>Consulta de datos</h2>
 
@@ -94,12 +103,26 @@ HEADER
                         <td><?php echo $mostrar['nom'] ?></td>
                         <td><?php echo $mostrar['sem'] ?></td>
                         <td><?php echo $mostrar['esp'] ?></td>
-                        <td> <img src="./img/modify.png" alt="HTML5 Icon" style="width:30px;height:30px;">
+
+                        <a href="editar.php?
+                        mat=<?php echo $mostrar['mat'] ?> &
+                        ap=<?php echo $mostrar['ap'] ?> &
+                        am=<?php echo $mostrar['am'] ?> &
+                        nom=<?php echo $mostrar['nom'] ?> &
+                        sem=<?php echo $mostrar['sem'] ?> &
+                        esp=<?php echo $mostrar['esp'] ?>
+                        ">
+                        
+                        <td> 
+                        <a href="editar.php">
+                        <img src="./img/modify.png" alt="HTML5 Icon" style="width:30px;height:30px;">
+                        </a>
                         </td>
+
                         <td>
-                            <a href="default.asp">
-                                <img src="./img/delete.png" alt="HTML5 Icon" style="width:30px;height:30px;">
-                            </a>
+                        <a href="eliminar.php">
+                        <img src="./img/delete.png" alt="HTML5 Icon" style="width:30px;height:30px;">
+                        </a>
                         </td>
 
                     </tr>
@@ -111,38 +134,7 @@ HEADER
 
             </article>
 
-            <div class="container-aside">
 
-                <aside>
-                <img src="./img/Logo.png" alt="">
-
-
-                <h2>¿Por qué se va a hacer? </h2>
-                <p>Para poder dar solución a la problemática de la falta de conocimiento de los padres con respecto al desempeño académico de sus hijos,
-                así como para ayudar a los alumnos ya que nosotros al ser parte del cuerpo estudiantil en ocasiones también hemos olvidado alguna tarea,
-                pero con esta página web podremos saber cuáles tareas tenemos asignadas, así como su fecha de entrega. </p>
-
-                </aside>
-
-                <aside>
-
-                <h2>¿Para qué se va a hacer?</h2>
-                <p>Para ser una herramienta que les permita a los padres estar informados acerca de las actividades encargadas a sus hijos. </p>
-
-                <h2>¿Qué problemáticas resuelve? </h2>
-                <p>Resuelve la problemática de que los padres no se encuentran al tanto de las tareas que les encargan a sus hijos, 
-                así como de si estos las realizan o no y si las entregan. </p>
-
-                <h2>¿Cómo se va a hacer? </h2>
-                <p>Documentación para realizar la aplicación web, crear una base de datos de pruebas,
-                realizar la aplicación para el cliente, realizar la aplicación para los docentes,
-                diseñar y mejorar la calidad de interacción de ambas aplicaciones,
-                llevar a cabo las pruebas para identificar errores, se llevará a cabo la utilización de la base de datos real para así finalizar la aplicación </p>
-
-                <a href="#"><button>Leer más</button></a>
-                </aside>
-
-            </div>
 
         </div>
     </div>

@@ -71,8 +71,8 @@ HEADER
 
             <article>
 
-                <h2>MyTablero</h2>
-                <h5>Estas son tus tareas...</h5>
+                <h1>MyTablero</h1>
+                <p>Estas son tus tareas...</p>
 
                 <table>
                     <tr>
