@@ -39,8 +39,8 @@ HEADER
                 <li><a href="index.html"><i class="fas fa-home"></i> Bienvenido</a></li>
                 <li class="menu-selected"><a href="mytablero.php" class="text-menu-selected"><i class="fa-solid fa-table"></i> MyTablero</a></li>
                 <li><a href="listado_alumno.php"><i class="fa-solid fa-list"></i> Listado de Alumnos</a></li>
-                <li><a href="registro_alumno.html"><i class="fa-solid fa-address-card"></i> Registro de Alumnos </a></li>
-                <li><a href="#"><i class="fa-solid fa-paper-plane"></i> Insertar Tareas </a></li>
+                <li><a href="registro_alumno.php"><i class="fa-solid fa-address-card"></i> Registro de Alumnos </a></li>
+                <li><a href="insertarTareas.php"><i class="fa-solid fa-paper-plane"></i> Insertar Tareas </a></li>
                 </ul>
             </nav>
 
@@ -59,9 +59,9 @@ HEADER
     
 </head>
 
-<!--
-
--->
+<!--------------------------------------
+CUERPO
+--------------------------------------->
 
 <body>
 
@@ -71,38 +71,49 @@ HEADER
 
             <article>
 
-                <h1>MyTablero</h1>
-                <p>Estas son tus tareas...</p>
+            <div class="search-bar">
+
+                <form action="buscar.php" method="post">
+                    <input type="text" name="buscar" class="field" id="">
+                    <input type="submit" class="field_a" value="Buscar">
+                </form>
+
+                </div>
+
+                <h2>Consulta de datos</h2>
 
                 <table>
-                    <tr>
-                        <th>MATERIAS</th>
-                        <th>ACTIVIDAD</th>
-                        <th>FECHA DE ENTREGA</th>
-                        <th>ESTATUS <br>  PENDIENTE/ENTREGADA/CALIFICADA</th>
-                    </tr>
+                <tr>
+                    <th>MATERIA</th>
+                    <th>ACTIVIDAD</th>
+                    <th>DESCRIPCION</th>
+                    <th>FECHA DE ENTREGA</th>
+                    <th>ESTATUS</th>
 
+                </tr>
 
+                    <?php 
 
-                    <tr>
-                        <td><?php echo 'ECOLOGIA' ?></td>
-                        <td><?php echo 'REDACCION DE TEXTO' ?></td>
-                        <td><?php echo '15/05/22' ?></td>
-                        <td><?php echo 'PEDNIENTE' ?></td>
-                    </tr>
+                        //Consultamos datos para plasmarlo en la tabla
+
+                        include("conexion.php");
+                        $tareas="SELECT * FROM tareas";
+
+                        $result=mysqli_query($conn,$tareas);
+                        while($row=mysqli_fetch_assoc($result)) { ?> 
+
                         <tr>
-                        <td><?php echo 'CALCULO' ?></td>
-                        <td><?php echo 'INVESTIGACION' ?></td>
-                        <td><?php echo '20/05/22' ?></td>
-                        <td><?php echo 'ENTREGADO' ?></td>
-                    </tr>
-                        <tr>
-                        <td><?php echo 'ECOLOGIA' ?></td>
-                        <td><?php echo 'TABLERO DE RESERVAS' ?></td>
-                        <td><?php echo '26/05/22' ?></td>
-                        <td><?php echo 'CALIFICADA' ?></td>
-                    </tr>
 
+                            <td><?php echo $row['matTarea'] ?></td>
+                            <td><?php echo $row['nomTarea'] ?></td>
+                            <td><?php echo $row['descTarea'] ?></td>
+                            <td><?php echo $row['fechaTarea'] . "\n", $row['horaTarea'] ?></td>
+                            <td><?php echo $row['estadoTarea'] ?></td>
+
+
+                        </tr>
+
+                    <?php } ?>
 
                 </table>
 
@@ -143,8 +154,10 @@ HEADER
             
         </div>
     </div>
-            <!-- Optional JavaScript; choose one of the two! -->
+            <!-- JavaScript -->
+
             <script src="./js/script.js"></script>
+            <script src=".confirmacion.js"></script>
     
 </body>
 </html>

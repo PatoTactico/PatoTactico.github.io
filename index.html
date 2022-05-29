@@ -12,6 +12,7 @@
 <!--------------------------------------
 CSS E ICONS
 ---------------------------------------> 
+    
     <script src="https://kit.fontawesome.com/839ff977a4.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="./css/estilos.css">
 
@@ -19,17 +20,20 @@ CSS E ICONS
 <body>
     
 <!--------------------------------------
-HEADER
+HEADER - NAVBAR
 --------------------------------------->
 
 <header>  
 
+    <!--Lo colocamos dentro de un conenedor para darle estilos desde css-->
     <div class="header-content">
 
+        <!--Logo-->
         <div class="logo">
             <h1>My<b>Tablero</b> CBtis</h1>
         </div>
 
+        <!--Menu-->
         <div class="menu" id="show-menu">
 
             <nav>
@@ -37,8 +41,8 @@ HEADER
                 <li class="menu-selected"><a href="index.html" class="text-menu-selected"><i class="fas fa-home"></i> Bienvenido</a></li>
                 <li><a href="mytablero.php"><i class="fa-solid fa-table"></i> MyTablero</a></li>
                 <li><a href="listado_alumno.php"><i class="fa-solid fa-list"></i> Listado de Alumnos</a></li>
-                <li><a href="registro_alumno.html"><i class="fa-solid fa-address-card"></i> Registro de Alumnos </a></li>
-                <li><a href="#"><i class="fa-solid fa-paper-plane"></i> Insertar Tareas </a></li>
+                <li><a href="registro_alumno.php"><i class="fa-solid fa-address-card"></i> Registro de Alumnos </a></li>
+                <li><a href="insertarTareas.php"><i class="fa-solid fa-paper-plane"></i> Insertar Tareas </a></li>
                 </ul>
             </nav>
 
@@ -46,6 +50,7 @@ HEADER
 
     </div>
 
+    <!--Boton de menu-->
     <div id="icon-menu">
 
         <i class="fa-solid fa-bars"></i>
@@ -58,121 +63,117 @@ HEADER
 PORTADA
 --------------------------------------->
 
+<!--Contenedor Padre | Con Id para .js-->
 <div class="container-all" id="move-content">
 
-<div class="container-cover">
-    <div class="container-info-cover">
-        <h1>¡Todo es posible!</h1>
-        <p>“Dime y lo olvido, enséñame y lo recuerdo, involúcrame y lo aprendo”. Benjamin Franklin.</p>
+    <!--Contenedor Portada-->
+    <div class="container-cover">
+        <!--Contenedor Info Portada-->
+        <div class="container-info-cover">
+            <h1>¡Todo es posible!</h1>
+            <p>“Dime y lo olvido, enséñame y lo recuerdo, involúcrame y lo aprendo”. Benjamin Franklin.</p>
+        </div>
     </div>
-</div>
 
-<div class="container-content">
+    <!--Contenedor para colocar el artículo | Es para el texto de la hoja izquierda-->
+    <div class="container-content">
+        <article>
 
-    <article>
+            <h1>Proyecto MyTablero</h1>
 
-        <h1>Proyecto MyTablero</h1>
+                <p>En este proyecto se encuentran incluidos muchos aspectos como los son los formularios, las bases de datos,
+                no podría faltar su diseño, estructura y funcionamiento.  A continuación, unas breves definiciones sobre formularios,
+                bases de datos y con que tipos de lenguajes realizaremos su diseño, estructura y funcionamiento. </p> <br>
 
-            <p>En este proyecto se encuentran incluidos muchos aspectos como los son los formularios, las bases de datos,
-             no podría faltar su diseño, estructura y funcionamiento.  A continuación, unas breves definiciones sobre formularios,
-              bases de datos y con que tipos de lenguajes realizaremos su diseño, estructura y funcionamiento. </p> <br>
+                <p>El objetivo de la creación de esta página web es el de que los padres de familia puedan tener un control,
+                así como una forma más accesible para supervisar si sus hijos han hecho y entregado sus tareas en tiempo y forma.
+                Además de que los mismos alumnos tengan un apoyo para poder saber que tareas tienen,
+                cuales aún no han entregado y cuales ya han sido entregadas, así como saber cuál es su calificación de dicha tarea. </p> <br>
 
-            <p>El objetivo de la creación de esta página web es el de que los padres de familia puedan tener un control,
-            así como una forma más accesible para supervisar si sus hijos han hecho y entregado sus tareas en tiempo y forma.
-            Además de que los mismos alumnos tengan un apoyo para poder saber que tareas tienen,
-            cuales aún no han entregado y cuales ya han sido entregadas, así como saber cuál es su calificación de dicha tarea. </p> <br>
+                <h1>Diseño</h1>
 
-            <h1>Diseño</h1>
+                <p>Diseño  
 
-            <p>Diseño  
+                El diseño es un aspecto visual primordial para que una página web sea atractiva y el público pueda disfrutar al navegar por esta misma.
+                El lenguaje que se utiliza para darle diseño a una página web es CSS (en inglés Cascading Style Sheets);
+                es un lenguaje que define la apariencia de un documento escrito en un lenguaje de marcado como lo es HTML.
+                Así, a los elementos de la página web creados con HTML se les dará la apariencia que se desee utilizando CSS: colores,
+                espacios entre elementos, tipos de letra, entre otros. </p><br>
 
-            El diseño es un aspecto visual primordial para que una página web sea atractiva y el público pueda disfrutar al navegar por esta misma.
-            El lenguaje que se utiliza para darle diseño a una página web es CSS (en inglés Cascading Style Sheets);
-            es un lenguaje que define la apariencia de un documento escrito en un lenguaje de marcado como lo es HTML.
-            Así, a los elementos de la página web creados con HTML se les dará la apariencia que se desee utilizando CSS: colores,
-            espacios entre elementos, tipos de letra, entre otros. </p><br>
+                <h1>Estructura</h1>
 
-            <h1>Estructura</h1>
+                <p>La estructura es el aspecto principal y fundamental para el inicio de una página web, se puede decir que es el esqueleto de nuestra página.
+                Se compone de tres partes: una línea que contiene información sobre la versión de HTML,
+                una sección de cabecera declarativa (delimitada por el elemento HEAD), un cuerpo, que contiene el contenido real del documento. </p>
 
-            <p>La estructura es el aspecto principal y fundamental para el inicio de una página web, se puede decir que es el esqueleto de nuestra página.
-            Se compone de tres partes: una línea que contiene información sobre la versión de HTML,
-            una sección de cabecera declarativa (delimitada por el elemento HEAD), un cuerpo, que contiene el contenido real del documento. </p>
+                <h1>Funcionamiento</h1>
 
-            <h1>Funcionamiento</h1>
+                <p>El funcionamiento es la parte intermedia al elaborar una página web,
+                es el nivel en donde hacemos que cualquier elemento de la página tenga su funcionamiento dependiendo de lo que se indique con las funciones y variantes.
+                El lenguaje que se utiliza para el funcionamiento es JavaScript, es capaz de detectar errores en formularios, 
+                de crear bonitos sliders que se adapten a cualquier pantalla, de hacer cálculos matemáticos de forma eficiente, 
+                de modificar elementos de una página web de forma sencilla.  </p> <br>
 
-            <p>El funcionamiento es la parte intermedia al elaborar una página web,
-            es el nivel en donde hacemos que cualquier elemento de la página tenga su funcionamiento dependiendo de lo que se indique con las funciones y variantes.
-            El lenguaje que se utiliza para el funcionamiento es JavaScript, es capaz de detectar errores en formularios, 
-            de crear bonitos sliders que se adapten a cualquier pantalla, de hacer cálculos matemáticos de forma eficiente, 
-            de modificar elementos de una página web de forma sencilla.  </p> <br>
+                <h1>Objetivo</h1>
 
-            <h1>Objetivo</h1>
+                <p>El objetivo de la creación de esta página web es el de que los padres de familia puedan tener un control,
+                así como una forma más accesible para supervisar si sus hijos han hecho y entregado sus tareas en tiempo y forma.
+                Además de que los mismos alumnos tengan un apoyo para poder saber que tareas tienen, cuales aún no han entregado y cuales ya han sido entregadas,
+                así como saber cuál es su calificación de dicha tarea. </p> <br>
 
-            <p>El objetivo de la creación de esta página web es el de que los padres de familia puedan tener un control,
-            así como una forma más accesible para supervisar si sus hijos han hecho y entregado sus tareas en tiempo y forma.
-            Además de que los mismos alumnos tengan un apoyo para poder saber que tareas tienen, cuales aún no han entregado y cuales ya han sido entregadas,
-            así como saber cuál es su calificación de dicha tarea. </p> <br>
+                <h1>En Conclusión</h1>
 
-            <h1>En Conclusión</h1>
+                <p>Lo que se busca lograr con este proyecto al realizar la página web es buscar que los padres de familia estén informados 
+                    sobre el desempeño académico de sus hijos e hijas, que puedan ver que tan bien o mal van sus hijos, y también que los mismos alumnos 
+                    puedan hacer uso de la página para crearles un acceso directo a sus trabajos, que revisen si tienen algún trabajo pendiente, 
+                    si ya tienen alguna calificación o si tiene tareas asignadas aún. <br><br>
+                    
+                    Tratamos de que tanto como padres y alumnos tomen represarías 
+                    sobre sus responsabilidades tantos alumnos como estudiantes y padres como los tutores de estos alumnos.
+                    En este proyecto no solo están incluidos los alumnos y padres, también los maestros, ellos podrán actualizar y editar cualquier 
+                    aspecto sobre los trabajos del alumno así que el docente también tiene un papel muy importante en el funcionamiento de esta página, 
+                    formaran parte de este camino y por lo tanto de este proyecto que está desarrollando con mucho entusiasmo y esperanza a su funcionamiento.  </p>
 
-            <p>Lo que se busca lograr con este proyecto al realizar la página web es buscar que los padres de familia estén informados 
-                sobre el desempeño académico de sus hijos e hijas, que puedan ver que tan bien o mal van sus hijos, y también que los mismos alumnos 
-                puedan hacer uso de la página para crearles un acceso directo a sus trabajos, que revisen si tienen algún trabajo pendiente, 
-                si ya tienen alguna calificación o si tiene tareas asignadas aún. <br><br>
+        </article>
+        
+        <!--Contenedor del apartado derecha-->
+        <div class="container-aside">
+            <aside>
+                <img src="./img/Logo.png" alt="">
+
+
+                <h2>¿Por qué se va a hacer? </h2>
+                <p>Para poder dar solución a la problemática de la falta de conocimiento de los padres con respecto al desempeño académico de sus hijos,
+                así como para ayudar a los alumnos ya que nosotros al ser parte del cuerpo estudiantil en ocasiones también hemos olvidado alguna tarea,
+                pero con esta página web podremos saber cuáles tareas tenemos asignadas, así como su fecha de entrega. </p>
+
+            </aside>
+
+            <aside>
                 
-                Tratamos de que tanto como padres y alumnos tomen represarías 
-                sobre sus responsabilidades tantos alumnos como estudiantes y padres como los tutores de estos alumnos.
-                En este proyecto no solo están incluidos los alumnos y padres, también los maestros, ellos podrán actualizar y editar cualquier 
-                aspecto sobre los trabajos del alumno así que el docente también tiene un papel muy importante en el funcionamiento de esta página, 
-                formaran parte de este camino y por lo tanto de este proyecto que está desarrollando con mucho entusiasmo y esperanza a su funcionamiento.  </p>
+                <h2>¿Para qué se va a hacer?</h2>
+                <p>Para ser una herramienta que les permita a los padres estar informados acerca de las actividades encargadas a sus hijos. </p>
 
-    </article>
-    
-    <div class="container-aside">
+                <h2>¿Qué problemáticas resuelve? </h2>
+                <p>Resuelve la problemática de que los padres no se encuentran al tanto de las tareas que les encargan a sus hijos, 
+                así como de si estos las realizan o no y si las entregan. </p>
 
-        <aside>
-            <img src="./img/Logo.png" alt="">
+                <h2>¿Cómo se va a hacer? </h2>
+                <p>Documentación para realizar la aplicación web, crear una base de datos de pruebas,
+                realizar la aplicación para el cliente, realizar la aplicación para los docentes,
+                diseñar y mejorar la calidad de interacción de ambas aplicaciones,
+                llevar a cabo las pruebas para identificar errores, se llevará a cabo la utilización de la base de datos real para así finalizar la aplicación </p>
 
+                <a href="#"><button>Leer más</button></a>
+            </aside>
+        </div>
 
-            <h2>¿Por qué se va a hacer? </h2>
-            <p>Para poder dar solución a la problemática de la falta de conocimiento de los padres con respecto al desempeño académico de sus hijos,
-            así como para ayudar a los alumnos ya que nosotros al ser parte del cuerpo estudiantil en ocasiones también hemos olvidado alguna tarea,
-            pero con esta página web podremos saber cuáles tareas tenemos asignadas, así como su fecha de entrega. </p>
-
-        </aside>
-
-        <aside>
-            
-            <h2>¿Para qué se va a hacer?</h2>
-            <p>Para ser una herramienta que les permita a los padres estar informados acerca de las actividades encargadas a sus hijos. </p>
-
-            <h2>¿Qué problemáticas resuelve? </h2>
-            <p>Resuelve la problemática de que los padres no se encuentran al tanto de las tareas que les encargan a sus hijos, 
-            así como de si estos las realizan o no y si las entregan. </p>
-
-            <h2>¿Cómo se va a hacer? </h2>
-            <p>Documentación para realizar la aplicación web, crear una base de datos de pruebas,
-            realizar la aplicación para el cliente, realizar la aplicación para los docentes,
-            diseñar y mejorar la calidad de interacción de ambas aplicaciones,
-            llevar a cabo las pruebas para identificar errores, se llevará a cabo la utilización de la base de datos real para así finalizar la aplicación </p>
-
-            <a href="#"><button>Leer más</button></a>
-        </aside>
-    
     </div>
 
 </div>
 
-</div>
-
-    <!-- Optional JavaScript; choose one of the two! -->
-
+    <!--SOLICITA SCRIPT-->
     <script src="./js/script.js"></script>
 
-
-    <!-- Option 1: Bootstrap Bundle with Popper -->
-
-
-    <!-- Option 2: Separate Popper and Bootstrap JS -->
-
+</body>
 </html>

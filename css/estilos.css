@@ -117,7 +117,7 @@ header{
     height: 500px;
     position: relative;
     margin-top: 80px;
-    background-image: url(../img/blog6.jpg);
+    background-image: url(../img/gif3.gif);
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
@@ -127,7 +127,7 @@ header{
     content: '';
     width: 100%;
     height: 100%;
-    background: #42697bbd;
+    background: #42697b2d;
     position: absolute;
     top: 0;
     left: 0;
@@ -438,10 +438,31 @@ article p{
         background-color: #ddd;
     }
 
+    .table_item_link i{
+        color: black;
+    }
+
+    tr:hover td
+    .table_item_link i{
+        color: white;
+        
+    }
+
+    .table_item_link i:hover{
+        opacity: 0.9;
+    }
+
     tr:hover td{
         background-color: #42697b;
         color: white;
+
+
     }
+    
+
+
+
+
 
     /*Boton*/
 
@@ -460,6 +481,10 @@ article p{
 
     }
 
+    .btn-primary:hover{
+        opacity: 0.8;
+    }
+
     /*listado_alumn*/
 
     .search-bar{
@@ -474,3 +499,9 @@ article p{
     .search-bar .submit{
         width: 30%;
     }
+
+    .boton-listado a:hover{
+        background-color: #42697b;
+    }
+
+

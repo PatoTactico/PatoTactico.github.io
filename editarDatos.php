@@ -51,29 +51,32 @@ HEADER
 </header>
     
 <!--------------------------------------
-CUERPO - INSERTAR DATOS
+CUERPO
 --------------------------------------->
 
-    <!--Colocan containers para dar estilos-->
     <div class="container-all" id="move-content">
+
+
         <div class="container-content_01">
+
             <article>
 
                 <?php
 
-                //Llama la conexion
+                //Llama la conexion a la pagina
                 require_once('conexion.php');
 
                 //Llama los resultados con $_GET
-                $id = $_GET['idForm'];
-                $ap = $_GET['apForm'];
-                $am = $_GET['amForm'];
-                $nom = $_GET['nomForm'];
-                $sem = $_GET['semForm'];
-                $esp = $_GET['espForm'];
+                $id = $_GET['idFormEdit'];
+                $ap = $_GET['apFormEdit'];
+                $am = $_GET['amFormEdit'];
+                $nom = $_GET['nomFormEdit'];
+                $sem = $_GET['semFormEdit'];
+                $esp = $_GET['espFormEdit'];
 
-                //Consulta para insertar datos con INSERT INTO
-                $sql = "INSERT INTO alumno (id,ap,am,nom,sem,esp) VALUES ('$id','$ap','$am','$nom','$sem','$esp')";
+                //Consulta los resultados con UPDATE SET
+                $sql = 
+                "UPDATE alumno SET id = '". $id ."', ap = '". $ap ."', am = '". $am ."', nom = '". $nom ."', sem = '". $sem ."', esp = '". $esp ."' WHERE id = '". $id ."'";
 
                 echo "<br>";
 
@@ -82,7 +85,7 @@ CUERPO - INSERTAR DATOS
 
                 ?>
 
-                    <h1>Se ha registrado corretamente</h1>
+                    <h1>Se ha modificado corretamente</h1>
                 
                 <?php
 
@@ -119,7 +122,7 @@ CUERPO - INSERTAR DATOS
 
                 ?>
 
-                    <a href="registro_alumno.php"><button>Regresar</button></a>
+                    <a href="listado_alumno.php"><button>Regresar</button></a>
                 
                 <?php
 
@@ -129,7 +132,8 @@ CUERPO - INSERTAR DATOS
                 ?>
             </article>
 
-            <!--Abre un "miniblog"-->
+            <!-- Abre un aside "miniblog"-->
+
             <div class="container-aside">
 
                 <aside>
@@ -165,9 +169,9 @@ CUERPO - INSERTAR DATOS
         </div>
     </div>
             
-         <!--JavaScript-->
+
+         <!-- Optional JavaScript; choose one of the two! -->
          <script src="./js/script.js"></script>
-         <script src="confirmacion.js"></script>
 
 </body>
 </html>
