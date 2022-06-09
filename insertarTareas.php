@@ -23,7 +23,7 @@ BARRA DE MENU
         <div class="header-content">
 
             <div class="logo">
-                <h1>My<b>Tablero</b> CBtis</h1>
+                <h1>My<b>Tablero</b> CBTis</h1>
             </div>
 
             <div class="menu" id="show-menu">
@@ -35,6 +35,7 @@ BARRA DE MENU
                     <li><a href="listado_alumno.php"><i class="fa-solid fa-list"></i> Listado de Alumnos</a></li>
                     <li><a href="registro_alumno.php"><i class="fa-solid fa-address-card"></i> Registro de Alumnos </a></li>
                     <li class="menu-selected"><a href="insertarTareas.php"><i class="fa-solid fa-paper-plane" class="text-menu-selected"></i> Insertar Tareas </a></li>
+                    <li><a href="admin_mytablero.php"><i class="fa-solid fa-table"></i> Admin Tablero </a></li>
                     </ul>
                 </nav>
 
@@ -62,26 +63,74 @@ CONTENIDO PRINCIPAL
 
             <article>
 
-                <h1>Insertar Tareas</h1>
+                <h2>INSERTAR TAREAS</h2>
                 <br>
 
                 <form action="subirTareas.php" method="get">
                     <label for="">Titulo</label>
-                    <input type="text" class="field" name="nomTarea" id="nomTarea">
+                    <input type="text" class="field" name="nomTarea" id="nomTarea" required min="1" required maxlength="50" autocomplete="off">
+
                     <label for="">Materia</label>
-                    <input type="text" class="field" name="matTarea" id="matTarea">
+                    <input type="text" class="field" name="matTarea" id="matTarea" required min="1" required maxlength="50" autocomplete="off" list="l5" 
+                    required pattern="[Cc]alculo [Dd]iferencial|[Ii]ngles|[Ff]isica|[Ee]cologia|[Cc]onstruye[Pp]aginas [Ww]eb| 
+                    [Dd]esarrolla [Aa]plicaciones [Qq]ue [Ss]e [Ee]jecutan [Ee]n [Ee]l [Cc]liente|
+                    [Dd]esarrolla [Aa]plicaciones [Qq]ue [Ss]e [Ee]jecutan [Ee]n [Ee]l [Ss]ervidor|[Tt]utoria">
+
+                    <datalist id="l5">
+                        <option>Calculo Diferencial</option>
+                        <option>Ingles</option>
+                        <option>Fisica</option>
+                        <option>Ecologia</option>
+                        <option>Construye Paginas Web</option>
+                        <option>Desarrolla Aplicaciones Que Se Ejecutan En El Cliente</option>
+                        <option>Desarrolla Aplicaciones Que Se Ejecutan En El Servidor</option>
+                        <option>Tutoria</option>
+                    </datalist>
+
                     <label for="">Descripcion</label>
-                    <input type="text" class="field" name="descTarea" id="descTarea">
+                    <input type="text" class="field" name="descTarea" id="descTarea" required min="1" autocomplete="off" required maxlength="50">
+
                     <label for="">Fecha</label>
-                    <input type="date" class="field" name="fechaTarea" id="fechaTarea">
+                    <input type="date" class="field" name="fechaTarea" id="fechaTarea" required min="1" autocomplete="off" required maxlength="6">
+
                     <label for="">Hora</label>
-                    <input type="time" class="field" name="horaTarea" id="horaTarea">
+                    <input type="time" class="field" name="horaTarea" id="horaTarea" required min="1" autocomplete="off" required maxlength="50">
+
                     <label for="">Estado</label>
-                    <input type="text" class="field" name="estadoTarea" id="estadoTarea">
+                    <input type="text" class="field" name="estadoTarea" id="estadoTarea" required min="1" autocomplete="off" required maxlength="50" list="l4" 
+                    required pattern="[Pp]endiente|[Ee]tregado|[Ss]in [Ee]ntregar">
+
+                    <datalist id="l4">
+                        <option>Pendiente</option>
+                        <option>Entregado</option>
+                        <option>Sin Entregar</option>
+                    </datalist>
+
                     <label for="">Semestre</label>
-                    <input type="text" class="field" name="semTarea" id="semTarea">
+                    <input type="text" class="field" name="semTarea" id="semTarea" required maxlength="50" autocomplete="off" list="l3" 
+                    required pattern="1|2|3|4|5|6">
+
+                    <datalist id="l3">
+                        <option>1</option>
+                        <option>2</option>
+                        <option>3</option>
+                        <option>4</option>
+                        <option>5</option>
+                        <option>6</option>
+                    </datalist>
+
                     <label for="">Grupo</label>
-                    <input type="text" class="field" name="grupoTarea" id="grupoTarea">
+                    <input type="text" class="field" name="grupoTarea" id="grupoTarea" required maxlength="50" list="l2" 
+                    required pattern="[Aa]|[Bb]|[Cc]|[Dd]|[Ee]">
+
+                    <datalist id="l2">
+                        <option>A</option>
+                        <option>B</option>
+                        <option>C</option>
+                        <option>D</option>
+                        <option>E</option>
+                    </datalist>
+
                     <input type="submit" class="btn-primary" value="Insertar">
                 </form>
             </article>

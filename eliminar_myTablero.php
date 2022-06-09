@@ -19,7 +19,7 @@
         echo $id;
 
         //Solicita eliminar el registro seleccionado
-        $sql = "DELETE FROM alumno WHERE id = $id";
+        $sql = "DELETE FROM tareas WHERE idTarea = $id";
 
         //Ejecuta la consulta
         $result = mysqli_query($conn, $sql);
@@ -29,10 +29,10 @@
 
             // IMPORTANTE | El redireccionamiento con header('location') no funciona en servidores compartidos
             // así que utilizaremos js para ello utilizamos location.herf
-            echo "<script>location.href='listado_alumno.php?removido=true';</script>";
+            echo "<script>location.href='admin_mytablero.php?removido=true';</script>";
             die();
         } else {
-            echo "<h1>Error al eliminar alumno</h1>";
+            echo "<h1>Error al eliminar tarea</h1>";
         }
                     //cerrar la conexion
                     mysqli_close($conn);

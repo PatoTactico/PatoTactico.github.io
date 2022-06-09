@@ -25,7 +25,7 @@ HEADER
     <div class="header-content">
 
         <div class="logo">
-            <h1>My<b>Tablero</b> CBtis</h1>
+            <h1>My<b>Tablero</b> CBTis</h1>
         </div>
 
         <div class="menu" id="show-menu">
@@ -37,6 +37,7 @@ HEADER
                 <li><a href="listado_alumno.php"><i class="fa-solid fa-list"></i> Listado de Alumnos</a></li>
                 <li class="menu-selected"><a href="registro_alumno.php" class="text-menu-selected"><i class="fa-solid fa-address-card"></i> Registro de Alumnos </a></li>
                 <li><a href="insertarTareas.php"><i class="fa-solid fa-paper-plane"></i> Insertar Tareas </a></li>
+                <li><a href="admin_mytablero.php"><i class="fa-solid fa-table"></i> Admin Tablero </a></li>
                 </ul>
             </nav>
 
@@ -62,7 +63,7 @@ HEADER
 
         <article>
 
-        <h1>Alta de alumnos</h1>
+        <h2>ALTA DE ALUMNOS</h2>
 
         <p>En caso de que el alumno no este ingresado en el sistema, engreselo de forma manual por este medio.</p>
 
@@ -74,15 +75,15 @@ HEADER
 
 
                 <p for="ap">Apellido Paterno: <br></p>
-                <input type="text" class="field" id="apForm" name="apForm" required maxlength="15">
+                <input type="text" class="field" id="apForm" name="apForm" required min="1" required maxlength="15">
 
 
                 <p for="am">Apellido Materno: <br></p>
-                <input type="text" class="field" id="amForm" name="amForm" required maxlength="15">
+                <input type="text" class="field" id="amForm" name="amForm" required min="1" required maxlength="15">
 
 
                 <p for="nom">Nombre: <br></p>
-                <input type="text" class="field" id="nomForm" name="nomForm" required maxlength="15">
+                <input type="text" class="field" id="nomForm" name="nomForm" required min="1" required maxlength="15">
 
 
                 <p for="sem">Semestre: <br></p>
@@ -90,8 +91,8 @@ HEADER
 
 
                 <p for="esp">Especialidad: <br></p>
-                <input type="text" class="field" id="espForm" name="espForm" list="l1" required
-                pattern="[Aa]dministracion [Dd]e [Rr]ecursos [Hh]umanos|[Pp]rogramacion|[Ee]lectricidad|[Pp]reparacion [Dd]e [Aa]limentos [Yy] [Bb]ebidas">
+                <input type="text" class="field" id="espForm" name="espForm" list="l1" 
+                required pattern="[Aa]dministracion [Dd]e [Rr]ecursos [Hh]umanos|[Pp]rogramacion|[Ee]lectricidad|[Pp]reparacion [Dd]e [Aa]limentos [Yy] [Bb]ebidas">
 
                     <datalist id="l1">
                       <option>Administracion de Recursos Humanos</option>

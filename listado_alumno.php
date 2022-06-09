@@ -23,7 +23,7 @@ BARRA DE MENU
         <div class="header-content">
 
             <div class="logo">
-                <h1>My<b>Tablero</b> CBtis</h1>
+                <h1>My<b>Tablero</b> CBTis</h1>
             </div>
 
             <div class="menu" id="show-menu">
@@ -35,6 +35,7 @@ BARRA DE MENU
                     <li class="menu-selected"><a href="listado_alumno.php" class="text-menu-selected"><i class="fa-solid fa-list"></i> Listado de Alumnos</a></li>
                     <li><a href="registro_alumno.php"><i class="fa-solid fa-address-card"></i> Registro de Alumnos </a></li>
                     <li><a href="insertarTareas.php"><i class="fa-solid fa-paper-plane"></i> Insertar Tareas </a></li>
+                    <li><a href="admin_mytablero.php"><i class="fa-solid fa-table"></i> Admin Tablero </a></li>
                     </ul>
                 </nav>
 
@@ -72,7 +73,7 @@ CONTENIDO PRINCIPAL
 
                 </div>
 
-                <h2>Consulta de datos</h2>
+                <h2>LISTADO DE ALUMNOS</h2>
 
                 <table>
                     <tr>
@@ -131,7 +132,7 @@ CONTENIDO PRINCIPAL
         </div>
     </div>
     
-     <!-- Optional JavaScript; choose one of the two! -->
+     <!-- JavaScript -->
     <script src="./js/script.js"></script>
     <script src="./js/confirmacion.js"></script>
 

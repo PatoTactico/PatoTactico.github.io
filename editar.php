@@ -23,7 +23,7 @@ HEADER
     <div class="header-content">
 
         <div class="logo">
-            <h1>My<b>Tablero</b> CBtis</h1>
+            <h1>My<b>Tablero</b> CBTis</h1>
         </div>
 
         <div class="menu" id="show-menu">
@@ -35,6 +35,7 @@ HEADER
                 <li><a href="listado_alumno.php"><i class="fa-solid fa-list"></i> Listado de Alumnos</a></li>
                 <li><a href="registro_alumno.php"><i class="fa-solid fa-address-card"></i> Registro de Alumnos </a></li>
                 <li><a href="insertarTareas.php"><i class="fa-solid fa-paper-plane"></i> Insertar Tareas </a></li>
+                <li><a href="admin_mytablero.php"><i class="fa-solid fa-table"></i> Admin Tablero </a></li>
                 </ul>
             </nav>
 
@@ -70,10 +71,10 @@ CUERPO
                 require_once('conexion.php');
 
                 //Muestra el titulo de la pagina
-                ?> <h2>Modificar id: </h2> <?php 
+                ?> <h2>MODIFICAR ALUMNO: </h2> <?php 
 
                 //Se toman el dato id de la fila seleccionada
-                $idFila = $_GET['id'];
+                $idFila = $_GET["id"];
 
                 echo $idFila;
 
@@ -82,13 +83,14 @@ CUERPO
 
                 //Ejecuta la consulta
                 $result = mysqli_query($conn, $query);
+                
 
                 
                 //Recorrer el resultado de la consulta
                 while ($row = mysqli_fetch_array($result)) {
-
+                    
                     ?>    
-
+                        <from method="GET">
                             <p for="id">Id: <br></p>
                             <input type="number" class="field" id="idFormEdit" name="idFormEdit" value="1" required min="1" max="999999999999999">
 
