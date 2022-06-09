@@ -78,6 +78,7 @@ CUERPO
                 require_once('conexion.php');
 
                 //Llama los resultados con $_GET
+                $idTarea = $_GET['idTarea'];
                 $matTarea = $_GET ['matTareaEdit'];
                 $nomTarea = $_GET ['nomTareaEdit'];
                 $descTarea = $_GET ['descTareaEdit'];
@@ -88,7 +89,7 @@ CUERPO
                 $grupoTarea = $_GET ['grupoTareaEdit'];
 
                 //Consulta los resultados con UPDATE SET
-                $sql = "UPDATE tareas SET matTarea='$matTarea', nomTarea='$nomTarea', descTarea='$descTarea', fechaTarea='$fechaTarea', horaTarea='$horaTarea', estadoTarea='$estadoTarea', semTarea='$semTarea', grupoTarea='$grupoTarea' WHERE idTarea";
+                $sql = "UPDATE tareas SET matTarea = '" .$matTarea. "' , nomTarea = '" .$nomTarea. "' , descTarea = '" .$descTarea. "' , fechaTarea = '" .$fechaTarea. "' , horaTarea = '" .$horaTarea. "' , estadoTarea = '" .$estadoTarea. "' , semTarea = '" .$semTarea. "' , grupoTarea = '" .$grupoTarea. "' WHERE idTarea = '" .$idTarea. "'";
 
                 echo "<br>";
 

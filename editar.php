@@ -121,7 +121,7 @@ CUERPO
                                 <option>Electricidad</option>
                                 <option>Preparacion de alimentos y bebidas</option>
                                 </datalist>
-
+                        
 
                                 <button type="submit" class="btn-primary" name="guardarEdit" id="guardarEdit">Guardar</button>
 

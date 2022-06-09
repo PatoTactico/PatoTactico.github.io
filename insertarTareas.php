@@ -98,7 +98,7 @@ CONTENIDO PRINCIPAL
 
                     <label for="">Estado</label>
                     <input type="text" class="field" name="estadoTarea" id="estadoTarea" required min="1" autocomplete="off" required maxlength="50" list="l4" 
-                    required pattern="[Pp]endiente|[Ee]tregado|[Ss]in [Ee]ntregar">
+                    required pattern="[Pp]endiente|[Ee]ntregado|[Ss]in [Ee]ntregar">
 
                     <datalist id="l4">
                         <option>Pendiente</option>
