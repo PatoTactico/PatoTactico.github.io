@@ -1,10 +1,5 @@
-<?php
-include("conexion.php");
-?>
-
 <!DOCTYPE html>
 <html>
-
 <head>
     <!-- Required meta tags -->
     <meta charset="utf-8">
@@ -16,7 +11,6 @@ CSS E ICONS
 ---------------------------------------> 
     <script src="https://kit.fontawesome.com/839ff977a4.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="./css/estilos.css">
-
 </head>
 <body>
     
@@ -41,7 +35,7 @@ HEADER
                 <li><a href="page_listadoAlumnos.php"><i class="fa-solid fa-list"></i> Listado de Alumnos</a></li>
                 <li><a href="page_registroAlumnos.php"><i class="fa-solid fa-address-card"></i> Registro de Alumnos </a></li>
                 <li><a href="page_insertarTareas.php"><i class="fa-solid fa-paper-plane"></i> Insertar Tareas </a></li>
-                <li class="menu-selected"><a href="page_admin_myTablero.php" class="text-menu-selected"><i class="fa-solid fa-table"></i> Admin Tablero </a></li>
+                <li><a href="page_admin_myTablero.php"><i class="fa-solid fa-table"></i> Admin Tablero </a></li>
                 </ul>
             </nav>
 
@@ -56,20 +50,16 @@ HEADER
     </div>
 
 </header>
-
     
-</head>
-
 <!--------------------------------------
 CUERPO
 --------------------------------------->
 
-<body>
-
     <div class="container-all" id="move-content">
 
+
         <div class="container-content_01">
-           
+
             <article>
 
                 <?php
@@ -78,18 +68,16 @@ CUERPO
                 require_once('conexion.php');
 
                 //Llama los resultados con $_GET
-                $idTarea = $_GET['idTarea'];
-                $matTarea = $_GET ['matTareaEdit'];
-                $nomTarea = $_GET ['nomTareaEdit'];
-                $descTarea = $_GET ['descTareaEdit'];
-                $fechaTarea = $_GET ['fechaTareaEdit'];
-                $horaTarea = $_GET ['horaTareaEdit'];
-                $estadoTarea = $_GET ['estadoTareaEdit'];
-                $semTarea = $_GET ['semTareaEdit'];
-                $grupoTarea = $_GET ['grupoTareaEdit'];
+                $id = $_GET['idFormEdit'];
+                $ap = $_GET['apFormEdit'];
+                $am = $_GET['amFormEdit'];
+                $nom = $_GET['nomFormEdit'];
+                $sem = $_GET['semFormEdit'];
+                $esp = $_GET['espFormEdit'];
 
                 //Consulta los resultados con UPDATE SET
-                $sql = "UPDATE tareas SET matTarea = '" .$matTarea. "' , nomTarea = '" .$nomTarea. "' , descTarea = '" .$descTarea. "' , fechaTarea = '" .$fechaTarea. "' , horaTarea = '" .$horaTarea. "' , estadoTarea = '" .$estadoTarea. "' , semTarea = '" .$semTarea. "' , grupoTarea = '" .$grupoTarea. "' WHERE idTarea = '" .$idTarea. "'";
+                $sql = 
+                "UPDATE alumno SET id = '". $id ."', ap = '". $ap ."', am = '". $am ."', nom = '". $nom ."', sem = '". $sem ."', esp = '". $esp ."' WHERE id = '". $id ."'";
 
                 echo "<br>";
 
@@ -104,42 +92,39 @@ CUERPO
 
                 echo "<br>";
 
-                echo "Id: $matTarea";
+                echo "Id: $id";
                 echo "<br>";
 
-                echo "Nombre: $nomTarea";
+                echo "Apellido Paterno: $ap";
                 echo "<br>";
 
-                echo "Descripcion: $descTarea";
+                echo "Apellido Materno: $am";
                 echo "<br>";
 
-                echo "Fecha: $fechaTarea";
+                echo "Nombre: $nom";
                 echo "<br>";
 
-                echo "Hora: $horaTarea";
+                echo "Semestre: $sem";
                 echo "<br>";
 
-                echo "Estado: $estadoTarea";
+                echo "Especialidad: $esp";
                 echo "<br>";
 
-                echo "Semestre: $semTarea";
-                echo "<br>";
-
-                echo "Grupo: $grupoTarea";
                 
                 } else {
                 ?>
 
                     <h1>Error :( <br></h1>
-                
+
                 <?php    
                 
                 echo "No se han logrado procesar. Asegurese de colocar los caracteres correctos." . "<br>" . "<br>" . $sql . "<br>" . mysqli_error($conn);
+                
                 }
 
                 ?>
 
-                    <a href="page_admin_myTablero.php"><button>Regresar</button></a>
+                    <a href="page_listadoAlumnos.php"><button>Regresar</button></a>
                 
                 <?php
 
@@ -148,6 +133,8 @@ CUERPO
 
                 ?>
             </article>
+
+            <!-- Abre un aside "miniblog"-->
 
             <div class="container-aside">
 
@@ -159,10 +146,14 @@ CUERPO
                     <p>Esta página sube el contenido de el formulario para realizar una edicion de una fila específica seleccionada. </p>
 
                 </aside>
-            </div>
-    </div>
-</div>
 
-</form>
+            </div>
+        </div>
+    </div>
+            
+
+         <!-- Optional JavaScript; choose one of the two! -->
+         <script src="./js/script.js"></script>
+
 </body>
 </html>

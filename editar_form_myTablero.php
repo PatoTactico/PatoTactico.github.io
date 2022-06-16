@@ -31,11 +31,11 @@ HEADER
             <nav>
                 <ul>
                 <li><a href="index.html"><i class="fas fa-home"></i> Bienvenido</a></li>
-                <li><a href="mytablero.php"><i class="fa-solid fa-table"></i> MyTablero</a></li>
-                <li><a href="listado_alumno.php"><i class="fa-solid fa-list"></i> Listado de Alumnos</a></li>
-                <li><a href="registro_alumno.php"><i class="fa-solid fa-address-card"></i> Registro de Alumnos </a></li>
-                <li><a href="insertarTareas.php"><i class="fa-solid fa-paper-plane"></i> Insertar Tareas </a></li>
-                <li><a href="admin_mytablero.php"><i class="fa-solid fa-table"></i> Admin Tablero </a></li>
+                <li><a href="page_mytablero.php"><i class="fa-solid fa-table"></i> MyTablero</a></li>
+                <li><a href="page_listadoAlumnos.php"><i class="fa-solid fa-list"></i> Listado de Alumnos</a></li>
+                <li><a href="page_registroAlumnos.php"><i class="fa-solid fa-address-card"></i> Registro de Alumnos </a></li>
+                <li><a href="page_insertarTareas.php"><i class="fa-solid fa-paper-plane"></i> Insertar Tareas </a></li>
+                <li><a href="page_admin_myTablero.php"><i class="fa-solid fa-table"></i> Admin Tablero </a></li>
                 </ul>
             </nav>
 
@@ -63,24 +63,26 @@ CUERPO
         <article>
 
             <!-- crear un formulario para editar registros en la tabla alumnos -->
-            <form  action="editar_submit_myTablero.php" method="get">
+            <form  action="editar_submit_page_mytablero.php" method="get">
 
                 <?php
 
-                // consultar un registro de la tabla alumnos
-                require_once('conexion.php');
+
 
                 //Muestra el titulo de la pagina
                 ?> <h2>MODIFICAR TAREA: </h2> <?php 
+
+                // consultar un registro de la tabla alumnos
+                require_once('conexion.php');
 
                 //Se toman el dato id de la fila seleccionada
                 $id = $_GET["id"];
 
                 echo $id;
-
-
-                    
-                    ?>    
+                
+                $sql="SELECT * FROM tareas WHERE idTarea = '.$id.'";
+                $result=mysqli_query($conn,$sql);
+ ?> 
 
 
                     <form method="get">
@@ -154,8 +156,21 @@ CUERPO
                 </form>
 
 
+
             </article>
 
+            <div class="container-aside">
+
+                <aside>
+                    <img src="./img/Logo.png" alt="">
+
+
+                    <h2>¿Qué hace esta pagina? </h2>
+                    <p>Esta página genera un formulario para realizar una edicion de una fila específica seleccionada. </p>
+
+                </aside>
+
+            </div>
         </div>
     </div>
 </div>

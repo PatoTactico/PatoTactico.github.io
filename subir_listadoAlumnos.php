@@ -1,10 +1,5 @@
-<?php
-include("conexion.php");
-?>
-
 <!DOCTYPE html>
 <html>
-
 <head>
     <!-- Required meta tags -->
     <meta charset="utf-8">
@@ -16,7 +11,6 @@ CSS E ICONS
 ---------------------------------------> 
     <script src="https://kit.fontawesome.com/839ff977a4.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="./css/estilos.css">
-
 </head>
 <body>
     
@@ -41,7 +35,7 @@ HEADER
                 <li><a href="page_listadoAlumnos.php"><i class="fa-solid fa-list"></i> Listado de Alumnos</a></li>
                 <li><a href="page_registroAlumnos.php"><i class="fa-solid fa-address-card"></i> Registro de Alumnos </a></li>
                 <li><a href="page_insertarTareas.php"><i class="fa-solid fa-paper-plane"></i> Insertar Tareas </a></li>
-                <li class="menu-selected"><a href="page_admin_myTablero.php" class="text-menu-selected"><i class="fa-solid fa-table"></i> Admin Tablero </a></li>
+                <li><a href="page_admin_myTablero.php"><i class="fa-solid fa-table"></i> Admin Tablero </a></li>
                 </ul>
             </nav>
 
@@ -56,40 +50,31 @@ HEADER
     </div>
 
 </header>
-
     
-</head>
-
 <!--------------------------------------
-CUERPO
+CUERPO - INSERTAR DATOS
 --------------------------------------->
 
-<body>
-
+    <!--Colocan containers para dar estilos-->
     <div class="container-all" id="move-content">
-
         <div class="container-content_01">
-           
             <article>
 
                 <?php
 
-                //Llama la conexion a la pagina
+                //Llama la conexion
                 require_once('conexion.php');
 
                 //Llama los resultados con $_GET
-                $idTarea = $_GET['idTarea'];
-                $matTarea = $_GET ['matTareaEdit'];
-                $nomTarea = $_GET ['nomTareaEdit'];
-                $descTarea = $_GET ['descTareaEdit'];
-                $fechaTarea = $_GET ['fechaTareaEdit'];
-                $horaTarea = $_GET ['horaTareaEdit'];
-                $estadoTarea = $_GET ['estadoTareaEdit'];
-                $semTarea = $_GET ['semTareaEdit'];
-                $grupoTarea = $_GET ['grupoTareaEdit'];
+                $id = $_GET['idForm'];
+                $ap = $_GET['apForm'];
+                $am = $_GET['amForm'];
+                $nom = $_GET['nomForm'];
+                $sem = $_GET['semForm'];
+                $esp = $_GET['espForm'];
 
-                //Consulta los resultados con UPDATE SET
-                $sql = "UPDATE tareas SET matTarea = '" .$matTarea. "' , nomTarea = '" .$nomTarea. "' , descTarea = '" .$descTarea. "' , fechaTarea = '" .$fechaTarea. "' , horaTarea = '" .$horaTarea. "' , estadoTarea = '" .$estadoTarea. "' , semTarea = '" .$semTarea. "' , grupoTarea = '" .$grupoTarea. "' WHERE idTarea = '" .$idTarea. "'";
+                //Consulta para insertar datos con INSERT INTO
+                $sql = "INSERT INTO alumno (id,ap,am,nom,sem,esp) VALUES ('$id','$ap','$am','$nom','$sem','$esp')";
 
                 echo "<br>";
 
@@ -98,34 +83,30 @@ CUERPO
 
                 ?>
 
-                    <h1>Se ha modificado corretamente</h1>
+                    <h1>Se ha registrado corretamente</h1>
                 
                 <?php
 
                 echo "<br>";
 
-                echo "Id: $matTarea";
+                echo "Id: $id";
                 echo "<br>";
 
-                echo "Nombre: $nomTarea";
+                echo "Apellido Paterno: $ap";
                 echo "<br>";
 
-                echo "Descripcion: $descTarea";
+                echo "Apellido Materno: $am";
                 echo "<br>";
 
-                echo "Fecha: $fechaTarea";
+                echo "Nombre: $nom";
                 echo "<br>";
 
-                echo "Hora: $horaTarea";
+                echo "Semestre: $sem";
                 echo "<br>";
 
-                echo "Estado: $estadoTarea";
+                echo "Especialidad: $esp";
                 echo "<br>";
 
-                echo "Semestre: $semTarea";
-                echo "<br>";
-
-                echo "Grupo: $grupoTarea";
                 
                 } else {
                 ?>
@@ -139,7 +120,7 @@ CUERPO
 
                 ?>
 
-                    <a href="page_admin_myTablero.php"><button>Regresar</button></a>
+                    <a href="page_registroAlumnos.php"><button>Regresar</button></a>
                 
                 <?php
 
@@ -149,20 +130,45 @@ CUERPO
                 ?>
             </article>
 
+            <!--Abre un "miniblog"-->
             <div class="container-aside">
 
                 <aside>
-                    <img src="./img/Logo.png" alt="">
+                <img src="./img/Logo.png" alt="">
 
 
-                    <h2>¿Qué hace esta pagina? </h2>
-                    <p>Esta página sube el contenido de el formulario para realizar una edicion de una fila específica seleccionada. </p>
+                <h2>¿Por qué se va a hacer? </h2>
+                <p>Para poder dar solución a la problemática de la falta de conocimiento de los padres con respecto al desempeño académico de sus hijos,
+                así como para ayudar a los alumnos ya que nosotros al ser parte del cuerpo estudiantil en ocasiones también hemos olvidado alguna tarea,
+                pero con esta página web podremos saber cuáles tareas tenemos asignadas, así como su fecha de entrega. </p>
 
                 </aside>
-            </div>
-    </div>
-</div>
 
-</form>
+                <aside>
+
+                <h2>¿Para qué se va a hacer?</h2>
+                <p>Para ser una herramienta que les permita a los padres estar informados acerca de las actividades encargadas a sus hijos. </p>
+
+                <h2>¿Qué problemáticas resuelve? </h2>
+                <p>Resuelve la problemática de que los padres no se encuentran al tanto de las tareas que les encargan a sus hijos, 
+                así como de si estos las realizan o no y si las entregan. </p>
+
+                <h2>¿Cómo se va a hacer? </h2>
+                <p>Documentación para realizar la aplicación web, crear una base de datos de pruebas,
+                realizar la aplicación para el cliente, realizar la aplicación para los docentes,
+                diseñar y mejorar la calidad de interacción de ambas aplicaciones,
+                llevar a cabo las pruebas para identificar errores, se llevará a cabo la utilización de la base de datos real para así finalizar la aplicación </p>
+
+                <a href="#"><button>Leer más</button></a>
+                </aside>
+
+            </div>
+        </div>
+    </div>
+            
+         <!--JavaScript-->
+         <script src="./js/script.js"></script>
+         <script src="confirmacion.js"></script>
+
 </body>
 </html>
